@@ -5,8 +5,8 @@
     "qa:smoke": "bash ./smoke-check.sh",
     "qa:quality": "bash ./qa/run-quality-checks.sh",
     "qa:lighthouse": "node ./qa/lighthouse-runner.mjs",
-    "qa:visual": "npx playwright test --config=./qa/playwright.config.cjs",
-    "qa:visual:update": "npx playwright test --config=./qa/playwright.config.cjs --update-snapshots"
+    "qa:visual": "npx --no-install @playwright/test test --config=./qa/playwright.config.cjs",
+    "qa:visual:update": "npx --no-install @playwright/test test --config=./qa/playwright.config.cjs --update-snapshots"
   },
   "devDependencies": {
     "@playwright/test": "^1.51.0",

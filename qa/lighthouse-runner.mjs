@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const themeDir = path.resolve(__dirname, '..');
 const reportDir = path.join(themeDir, 'qa', 'reports');
-const baseUrl = process.env.GSO_BASE_URL || 'http://gap-smile-geek.local';
+const baseUrl = process.env.GSO_BASE_URL || 'https://gap-smile-geek.local';
 
 const routes = ['/', '/services/', '/about/', '/contact/'];
 const thresholds = {
@@ -19,7 +19,7 @@ const thresholds = {
 };
 
 const scores = [];
-const chrome = await launch({ chromeFlags: ['--headless=new', '--no-sandbox', '--disable-gpu'] });
+const chrome = await launch({ chromeFlags: ['--headless=new', '--no-sandbox', '--disable-gpu', '--ignore-certificate-errors'] });
 
 try {
 	for (const route of routes) {
@@ -31,6 +31,9 @@ try {
 				output: 'json',
 				logLevel: 'error',
 				onlyCategories: Object.keys(thresholds),
+				formFactor: 'desktop',
+				screenEmulation: { disabled: true },
+				throttlingMethod: 'provided',
 			},
 			undefined
 		);

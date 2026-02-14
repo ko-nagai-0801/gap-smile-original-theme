@@ -2,8 +2,10 @@
 set -euo pipefail
 
 THEME_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-BASE_URL="${GSO_BASE_URL:-http://gap-smile-geek.local}"
+BASE_URL="${GSO_BASE_URL:-https://gap-smile-geek.local}"
 SKIP_SMOKE=0
+
+cd "$THEME_DIR"
 
 for arg in "$@"; do
 	if [ "$arg" = "--skip-smoke" ]; then
@@ -27,7 +29,7 @@ fi
 
 echo "[QA 3/3] Visual + Axe (Playwright)"
 if command -v npx >/dev/null 2>&1 && [ -d "$THEME_DIR/node_modules/@playwright/test" ] && [ -d "$THEME_DIR/node_modules/axe-core" ]; then
-	GSO_BASE_URL="$BASE_URL" npx playwright test --config="$THEME_DIR/qa/playwright.config.cjs"
+	GSO_BASE_URL="$BASE_URL" npx --no-install @playwright/test test --config="$THEME_DIR/qa/playwright.config.cjs"
 else
 	echo "skip playwright/axe: install dependencies with npm install"
 fi

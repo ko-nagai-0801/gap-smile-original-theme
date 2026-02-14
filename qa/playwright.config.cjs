@@ -1,6 +1,6 @@
 const { defineConfig } = require('@playwright/test');
 
-const baseURL = process.env.GSO_BASE_URL || 'http://gap-smile-geek.local';
+const baseURL = process.env.GSO_BASE_URL || 'https://gap-smile-geek.local';
 
 module.exports = defineConfig({
 	testDir: './tests',

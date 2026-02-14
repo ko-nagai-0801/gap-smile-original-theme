@@ -9,7 +9,7 @@
 
 ## 環境変数
 - `GSO_BASE_URL` を使って対象URLを指定できます。
-  - 例: `GSO_BASE_URL=http://gap-smile-geek.local`
+  - 例: `GSO_BASE_URL=https://gap-smile-geek.local`
 
 ## 目的
 - Smoke: 実装構造の破壊を即検知

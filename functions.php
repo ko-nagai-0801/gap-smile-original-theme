@@ -67,6 +67,7 @@ function gso_default_settings() {
 		'consent_banner_title'    => '計測とCookieの利用について',
 		'consent_banner_text'     => 'サイト改善のためアクセス解析（GA4）を利用しています。計測への同意可否を選択できます。',
 		'consent_policy_url'      => '',
+		'force_https_redirect'    => '1',
 		'noindex_search_pages'    => '1',
 		'noindex_404_pages'       => '1',
 		'noindex_works_page'      => '0',
@@ -119,6 +120,7 @@ function gso_setting_fields() {
 		'consent_banner_title'    => [ 'label' => '同意バナータイトル', 'section' => 'gso_social', 'type' => 'text', 'maxlength' => 80, 'description' => '' ],
 		'consent_banner_text'     => [ 'label' => '同意バナー本文', 'section' => 'gso_social', 'type' => 'textarea', 'maxlength' => 220, 'description' => '' ],
 		'consent_policy_url'      => [ 'label' => 'ポリシーURL', 'section' => 'gso_social', 'type' => 'url', 'maxlength' => 200, 'description' => '未入力時はContactページを案内します。' ],
+		'force_https_redirect'    => [ 'label' => 'HTTPアクセスをHTTPSへリダイレクト', 'section' => 'gso_social', 'type' => 'checkbox', 'description' => 'Local SSLや本番SSLが有効な環境で推奨。' ],
 		'noindex_search_pages'    => [ 'label' => '検索結果ページを noindex', 'section' => 'gso_social', 'type' => 'checkbox', 'description' => '' ],
 		'noindex_404_pages'       => [ 'label' => '404ページを noindex', 'section' => 'gso_social', 'type' => 'checkbox', 'description' => '' ],
 		'noindex_works_page'      => [ 'label' => 'Worksページを noindex', 'section' => 'gso_social', 'type' => 'checkbox', 'description' => '実績ページを検索エンジンに出したくない場合にON' ],
@@ -165,6 +167,10 @@ function gso_get_consent_policy_url() {
 	return '' !== $url ? $url : gso_page_url( 'contact' );
 }
 
+function gso_should_force_https_redirect() {
+	return '1' === (string) gso_get_setting( 'force_https_redirect' );
+}
+
 function gso_get_operation_mode() {
 	$mode = (string) gso_get_setting( 'operation_mode' );
 	return in_array( $mode, [ 'beginner', 'advanced' ], true ) ? $mode : 'beginner';
@@ -191,6 +197,7 @@ function gso_is_advanced_setting_field( $key ) {
 		'consent_banner_title',
 		'consent_banner_text',
 		'consent_policy_url',
+		'force_https_redirect',
 		'noindex_search_pages',
 		'noindex_404_pages',
 		'noindex_works_page',
@@ -1770,6 +1777,29 @@ add_filter(
 		$meta = gso_seo_context();
 		return $meta['title'];
 	}
+);
+
+add_action(
+	'template_redirect',
+	function () {
+		if ( is_admin() || wp_doing_ajax() || wp_doing_cron() || is_preview() ) {
+			return;
+		}
+
+		if ( ! gso_should_force_https_redirect() || is_ssl() ) {
+			return;
+		}
+
+		$host = isset( $_SERVER['HTTP_HOST'] ) ? (string) wp_unslash( $_SERVER['HTTP_HOST'] ) : '';
+		$uri  = isset( $_SERVER['REQUEST_URI'] ) ? (string) wp_unslash( $_SERVER['REQUEST_URI'] ) : '/';
+		if ( '' === $host ) {
+			return;
+		}
+
+		wp_safe_redirect( 'https://' . $host . $uri, 301 );
+		exit;
+	},
+	1
 );
 
 add_action(

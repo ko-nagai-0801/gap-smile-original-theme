@@ -13,7 +13,7 @@ Text Domain: gap-smile-original
   --gso-ink: #102a43;
   --gso-brand: #2f6e9d;
   --gso-brand-dark: #1f4f73;
-  --gso-accent: #ee6c4d;
+  --gso-accent: #c74f2f;
   --gso-bg-soft: #f4f8fc;
   --gso-border: #d7e3ef;
   --gso-white: #ffffff;
@@ -174,7 +174,7 @@ img {
 }
 
 .gso-contact-link:hover {
-  background: #d95f42;
+  background: #a93b22;
 }
 
 .gso-nav-mobile {
@@ -283,7 +283,7 @@ img {
 }
 
 .gso-btn-primary:hover {
-  background: #d95f42;
+  background: #a93b22;
 }
 
 .gso-btn-secondary {
@@ -1001,8 +1001,8 @@ img {
 }
 
 .gso-consent-accept {
-  border-color: #ee6c4d;
-  background: #ee6c4d;
+  border-color: #c74f2f;
+  background: #c74f2f;
 }
 
 .gso-consent-meta {

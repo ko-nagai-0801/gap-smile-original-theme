@@ -25,7 +25,7 @@
 - 事前準備（初回のみ）:
   1. `npm install`
   2. `npx playwright install`
-  3. 必要なら `GSO_BASE_URL` を環境変数で設定
+  3. 必要なら `GSO_BASE_URL` を環境変数で設定（例: `https://gap-smile-geek.local`）
 
 ## 5. 障害時の復旧手順
 1. 直近の設定JSONをImport。
