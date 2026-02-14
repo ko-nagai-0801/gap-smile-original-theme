@@ -1,0 +1,70 @@
+.gso-counter {
+	margin-top: 6px;
+	font-size: 12px;
+	color: #50575e;
+}
+
+.gso-counter.is-near-limit {
+	color: #b26200;
+}
+
+.gso-counter.is-limit {
+	color: #b32d2e;
+	font-weight: 700;
+}
+
+.gso-template-insert-btn {
+	width: 100%;
+	text-align: left;
+	justify-content: flex-start;
+}
+
+.gso-restore-list {
+	margin: 10px 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.gso-restore-list li {
+	margin: 0 0 8px;
+	padding: 8px;
+	border: 1px solid #dcdcde;
+	border-radius: 6px;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+.gso-restore-list a {
+	flex-shrink: 0;
+}
+
+.gso-image-ratio-message {
+	margin-top: 8px;
+}
+
+.gso-image-size-message {
+	margin-top: 4px;
+}
+
+.gso-image-ratio-message.is-ok {
+	color: #0a7a33;
+	font-weight: 600;
+}
+
+.gso-image-ratio-message.is-warn {
+	color: #b32d2e;
+	font-weight: 600;
+}
+
+.gso-image-size-message.is-ok {
+	color: #0a7a33;
+	font-weight: 600;
+}
+
+.gso-image-size-message.is-warn {
+	color: #b32d2e;
+	font-weight: 600;
+}

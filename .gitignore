@@ -1,0 +1,7 @@
+node_modules/
+qa/reports/
+playwright-report/
+test-results/
+qa/tests/__screenshots__/
+.DS_Store
+npm-debug.log*

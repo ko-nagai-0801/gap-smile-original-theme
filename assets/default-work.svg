@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-label="Work placeholder">
+  <defs>
+    <linearGradient id="gsoWorkBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dceaf5"/>
+      <stop offset="100%" stop-color="#f4f8fc"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#gsoWorkBg)"/>
+  <g fill="none" stroke="#2f6e9d" stroke-width="16" opacity="0.45">
+    <rect x="236" y="182" width="1128" height="636" rx="24"/>
+    <path d="M330 706l228-236 180 160 252-286 280 362"/>
+    <circle cx="541" cy="404" r="62"/>
+  </g>
+  <text x="800" y="884" fill="#1f4f73" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-size="56" font-weight="700">WORK IMAGE PLACEHOLDER</text>
+</svg>

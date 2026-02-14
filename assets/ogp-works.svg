@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Gap Smile Works OGP">
+  <defs>
+    <linearGradient id="gsoWorksBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#173e5d"/>
+      <stop offset="100%" stop-color="#2e6c9a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#gsoWorksBg)"/>
+  <g opacity="0.14" fill="#ffffff">
+    <circle cx="980" cy="520" r="210"/>
+    <circle cx="140" cy="140" r="140"/>
+  </g>
+  <text x="88" y="210" fill="#d8e8f5" font-family="'Noto Sans JP',sans-serif" font-size="40" font-weight="700">Gap Smile Original Theme</text>
+  <text x="88" y="318" fill="#ffffff" font-family="'Noto Sans JP',sans-serif" font-size="82" font-weight="800">Works</text>
+  <text x="88" y="392" fill="#ffffff" font-family="'Noto Sans JP',sans-serif" font-size="44" font-weight="700">制作実績</text>
+  <rect x="88" y="438" width="220" height="10" rx="5" fill="#ee6c4d"/>
+  <text x="88" y="506" fill="#d9e9f6" font-family="'Noto Sans JP',sans-serif" font-size="28">成果指標ベースで実装力を可視化する実績ページ</text>
+</svg>

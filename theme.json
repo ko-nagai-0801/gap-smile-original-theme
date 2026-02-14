@@ -1,0 +1,81 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "appearanceTools": false,
+    "color": {
+      "custom": false,
+      "customGradient": false,
+      "defaultPalette": false,
+      "palette": [
+        {
+          "slug": "ink",
+          "name": "Ink",
+          "color": "#102a43"
+        },
+        {
+          "slug": "brand",
+          "name": "Brand",
+          "color": "#2f6e9d"
+        },
+        {
+          "slug": "brand-dark",
+          "name": "Brand Dark",
+          "color": "#1f4f73"
+        },
+        {
+          "slug": "accent",
+          "name": "Accent",
+          "color": "#ee6c4d"
+        },
+        {
+          "slug": "white",
+          "name": "White",
+          "color": "#ffffff"
+        }
+      ]
+    },
+    "spacing": {
+      "padding": false,
+      "units": ["px", "rem", "%"]
+    },
+    "typography": {
+      "customFontSize": false,
+      "defaultFontSizes": false,
+      "fontFamilies": [
+        {
+          "slug": "noto-sans-jp",
+          "name": "Noto Sans JP",
+          "fontFamily": "\"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif"
+        }
+      ],
+      "fontSizes": [
+        {
+          "slug": "sm",
+          "name": "Small",
+          "size": "0.9rem"
+        },
+        {
+          "slug": "md",
+          "name": "Medium",
+          "size": "1rem"
+        },
+        {
+          "slug": "lg",
+          "name": "Large",
+          "size": "1.35rem"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#ffffff",
+      "text": "#102a43"
+    },
+    "typography": {
+      "fontFamily": "\"Noto Sans JP\", \"Hiragino Kaku Gothic ProN\", \"Yu Gothic\", sans-serif",
+      "lineHeight": "1.75"
+    }
+  }
+}

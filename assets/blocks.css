@@ -1,0 +1,24 @@
+.gso-editor-preview {
+	border: 1px solid #d7e3ef;
+	border-radius: 16px;
+	padding: 20px;
+	background: #ffffff;
+}
+
+.gso-editor-preview-hero {
+	color: #ffffff;
+	background: linear-gradient(140deg, #1f4f73 0%, #2f6e9d 65%, #245e88 100%);
+}
+
+.gso-editor-preview-hero .gso-hero-title {
+	margin: 12px 0 0;
+	font-size: clamp(1.6rem, 2.4vw, 2.4rem);
+}
+
+.gso-editor-preview-services .gso-grid-3 {
+	margin-top: 18px;
+}
+
+.gso-editor-preview-cta {
+	text-align: center;
+}

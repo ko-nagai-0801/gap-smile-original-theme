@@ -1,0 +1,17 @@
+{
+  "name": "gap-smile-original-theme-qa",
+  "private": true,
+  "scripts": {
+    "qa:smoke": "bash ./smoke-check.sh",
+    "qa:quality": "bash ./qa/run-quality-checks.sh",
+    "qa:lighthouse": "node ./qa/lighthouse-runner.mjs",
+    "qa:visual": "npx playwright test --config=./qa/playwright.config.cjs",
+    "qa:visual:update": "npx playwright test --config=./qa/playwright.config.cjs --update-snapshots"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.51.0",
+    "axe-core": "^4.10.2",
+    "chrome-launcher": "^1.1.2",
+    "lighthouse": "^12.3.0"
+  }
+}
